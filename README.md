@@ -1,10 +1,26 @@
-# Node.js template
+# Assignment 1
 
-This is a Node.js project.
+##### This repo is a submission for an assignment.
 
-Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
+### Login API
 
-## Resources
+`GET` - `/login?user=<user>&pass=<pass>`
+```
+Description: To get verify login with 'user' & 'pass'
+Parameter: user & pass - original client key
+Response: Login Successful
+```
+1. Example - https://abc.codesanbox.io/login?user=aaJJaa12&pass=as7sa8@kkdA
+```
+Login Successful
+```
 
-- [CodeSandbox — Docs](https://codesandbox.io/docs/projects)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
+2. Example - https://abc.codesanbox.io/login?user=aaJJaa12&pass=as7s
+```json
+{"error":"Password not valid"}
+```
+2. Example - https://abc.codesanbox.io/login?user=aa&pass=as7s
+```json
+{"error":"Username not valid"}
+```
+   
